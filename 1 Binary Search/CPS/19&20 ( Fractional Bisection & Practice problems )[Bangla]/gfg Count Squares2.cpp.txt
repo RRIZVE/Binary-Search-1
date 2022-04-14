@@ -1,0 +1,22 @@
+class Solution {
+  public:
+    int countSquares(int N)
+    {
+    long long l=1,r=N,mid;
+    while(l<=r)
+    {
+        mid=l+r>>1;
+        if(mid*mid>N-1)
+        {
+            r=mid-1;
+        }
+        else
+        {
+            l=mid+1;
+        }
+
+    }
+   // cout<<r<<endl;
+    return r;
+    }
+};
